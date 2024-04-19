@@ -1,0 +1,1965 @@
+[
+    {
+        "id": "7d1e7a665dc5ec5e",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b74a753feb2f59db",
+        "type": "ui_template",
+        "z": "7d1e7a665dc5ec5e",
+        "group": "",
+        "name": "Custom CSS",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n\n    @font-face {\n        font-family: Roboto Mono; \n        src: url(\"/RobotoMono-Regular.ttf\") format(\"truetype\");\n    }\n\n    .nr-dashboard-template h1, .nr-dashboard-template h2, .nr-dashboard-template h3, .nr-dashboard-template h4 {\n        color: white !important;\n        background-color: transparent !important;\n        font-family: 'Roboto Mono', monospace;\n        text-align: center;\n    }\n\n    md-datepicker-input md-input {\n        font-family: 'Roboto Mono', monospace;\n    }\n\n    * {\n        font-family: 'Roboto Mono', monospace;\n        color: #FFFFFF;\n    }\n\n    /*Main background*/\n    body {\n        background: background-color #55efc4;\n        background-image: linear-gradient(315deg, #55efc4 0%, #000000 74%);;\n        animation: gradient 15s ease infinite;\n        background-size: 400% 400%;\n        height: 100vh;\n    }\n\n    @keyframes gradient {\n        0% {\n            background-position: 0% 50%;\n        }\n        50% {\n            background-position: 100% 50%;\n        }\n        100% {\n            background-position: 0% 50%;\n        }\n    }\n\n    /*Top bar*/\n    body.nr-dashboard-theme md-toolbar {\n        font-family: 'Roboto Mono', monospace;\n        font-size: 10 px;\n        background-color: transparent !important;\n        color: #FFFFFF !important;\n    }\n    body.nr-dashboard-theme md-content md-card {\n        background-color: transparent !important;\n    }\n\n    body.nr-dashboard-theme md-content md-card h2{\n        font-family: 'Roboto Mono', monospace;\n        font-size: 10 px;\n        background-color: transparent !important;\n        color: #FFFFFF !important;\n        text-align: center;\n    }\n\n    body.nr-dashboard-theme md-content md-card div{\n        font-family: 'Roboto Mono', monospace;\n        font-size: 10 px;\n        background-color: transparent !important;\n        color: #FFFFFF !important;\n    }\n\n    /*Theme*/\n    body.nr-dashboard-theme {\n        background-color: #fafafa;\n        font-family: 'Roboto Mono', monospace;\n    }\n\n    /*Left menu*/\n    \n    /*Sidebar*/\n    body.nr-dashboard-theme md-sidenav {\n        color: white !important;\n        background-color: rgba(0, 0, 0, 0) !important;\n    }\n\n    /*Hover selection*/\n    a.md-no-style, button.md-no-style {\n        border-radius: 10px !important;\n    }\n\n\n    .nr-menu-item-active div button {\n        border-right: 4px solid rgb(41 98 255) !important;\n    }\n    /*List*/\n    body.nr-dashboard-theme md-sidenav div.md-list-item-inner {\n        color: white !important;\n        background-color: transparent !important;\n        border-radius: 10px !important;\n    }\n\n    body.nr-dashboard-theme md-sidenav div.md-list-item-inner p{\n        font-family: 'Roboto Mono', monospace;\n    }\n\n    ui-card-panel {\n        background-color: rgba(255, 255, 255, 0.1) !important;\n        border-radius: 10px !important;\n    }\n\n    .nr-dashboard-theme ui-card-panel {\n        border: none !important;\n    }\n\n    .nr-dashboard-theme ui-card-panel p.nr-dashboard-cardtitle {\n        color: rgba(255, 255, 255, 0.5) !important;\n        text-align: center;\n    }\n\n    body.nr-dashboard-theme md-content md-card #text {\n        font-family: 'Roboto Mono', monospace;\n    }\n\n    .nr-dashboard-theme .nr-dashboard-button .md-button {\n        background-color: rgba(255, 255, 255, .1) !important;\n    }\n\n    md-button {\n        border-radius: 10px !important;\n    }\n\n    .nr-dashboard-theme md-select-menu {\n        background-color: rgba(40, 85, 165, 1) !important;\n    }\n\n    .nr-dashboard-theme md-select-menu,\n    .nr-dashboard-theme md-select-menu md-option {\n        background-color: transparent !important;\n    }\n\n    .nr-dashboard-theme .md-select-menu-container {\n        border-radius: 10px !important;\n        border: none !important;\n    }\n\n    .nr-dashboard-theme md-select-menu md-option[selected] {\n        color: white !important;\n        background-color: #1a3566 !important;\n    }\n\n    .nr-dashboard-theme .nr-dashboard-gauge tspan {\n        fill: white;\n        color: white;\n        font-family: 'Roboto Mono', monospace;\n        margin: 8px;\n        text-align: center;\n    }\n\n    .nr-dashboard-chart-container{\n        font-family: 'Roboto Mono', monospace;\n        fill:white;\n    }\n    \n    md-card>img,\n    md-card>md-card-header img,\n    md-card md-card-title-media img {\n        border-radius: 10px !important;\n    }\n\n    .nr-dashboard-theme .color-picker-input-wrapper>input {\n        color: white !important;\n        background-color: transparent !important;\n    }\n</style>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 390,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82442541b8210860",
+        "type": "ui_chart",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "group": "f2b4d7d6cc4c27db",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Historico del nodo A",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "ESPERANDO...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "chart",
+        "x": 1540,
+        "y": 720,
+        "wires": [
+            [
+                "62cb9667a70bac36"
+            ]
+        ]
+    },
+    {
+        "id": "7e403151e1194ced",
+        "type": "ui_chart",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "group": "f2b4d7d6cc4c27db",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "label": "Historico del nodo B",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "ESPERANDO...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1540,
+        "y": 780,
+        "wires": [
+            [
+                "62cb9667a70bac36"
+            ]
+        ]
+    },
+    {
+        "id": "5760017ef81863c6",
+        "type": "ui_chart",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "group": "f2b4d7d6cc4c27db",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Historico del nodo principal",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "ESPERANDO...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff",
+            "#ffffff"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1540,
+        "y": 840,
+        "wires": [
+            [
+                "62cb9667a70bac36"
+            ]
+        ]
+    },
+    {
+        "id": "c56043db2ea01ee4",
+        "type": "ui_gauge",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "group": "9905b0ad57d8a427",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Nodo A",
+        "label": "por ciento",
+        "format": "{{msg.aforoa}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 815,
+        "y": 640,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "54f30d8fb295bc9f",
+        "type": "ui_gauge",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "group": "9905b0ad57d8a427",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Nodo B",
+        "label": "por ciento",
+        "format": "{{msg.aforob}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 815,
+        "y": 680,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "c58d1abff9dfab79",
+        "type": "ui_gauge",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "group": "9905b0ad57d8a427",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Nodo principal",
+        "label": "por ciento",
+        "format": "{{msg.aforoc}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 815,
+        "y": 720,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "c02c9f003763563a",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "Entradas nodo A",
+        "func": "if (msg.payload.length!=0){\n    msg.payload = {_id: msg.payload[0][\"_id\"],entradas: msg.entradaA};\n} else {\n    msg.payload = {entradas: msg.entradaA};\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 200,
+        "wires": [
+            [
+                "2b1efb57ebd58a47"
+            ]
+        ]
+    },
+    {
+        "id": "2b1efb57ebd58a47",
+        "type": "mongodb out",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "entradasA",
+        "collection": "operaciones",
+        "payonly": true,
+        "upsert": true,
+        "multi": true,
+        "operation": "store",
+        "x": 1070,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9dd44ee0fdcae206",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 1",
+        "func": "\nmsg.payload = {\"entradas.nodo\": \"A\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 555,
+        "y": 200,
+        "wires": [
+            [
+                "0b5a611038845042"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "7ca6fa1a6219783e",
+        "type": "ui_template",
+        "z": "7d1e7a665dc5ec5e",
+        "group": "448a153d771784b9",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "4",
+        "format": "<h2>Entradas: </h2>\n<div ng-bind-html=\"msg.payload\"></div>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1705,
+        "y": 200,
+        "wires": [
+            [
+                "3aa49b65cfdfc2ce"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "e957afeddd6cd8d0",
+        "type": "ui_template",
+        "z": "7d1e7a665dc5ec5e",
+        "group": "448a153d771784b9",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "5",
+        "format": "<html>\n<body>\n    <h2>Salidas: </h2>\n<div ng-bind-html=\"msg.payload\"></div>\n</body>\n\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1705,
+        "y": 260,
+        "wires": [
+            [
+                "3aa49b65cfdfc2ce"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "3aa49b65cfdfc2ce",
+        "type": "ui_ui_control",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "events": "all",
+        "x": 1880,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f8f5dabf79b1c569",
+        "type": "ui_ui_control",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "events": "all",
+        "x": 1880,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1346bfd84e37148c",
+        "type": "ui_ui_control",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "events": "all",
+        "x": 1880,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "91390d3bf199d1ad",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "Salidas nodo A",
+        "func": "if (msg.payload.length != 0) {\n    msg.payload = { _id: msg.payload[0][\"_id\"], salidas: msg.salidaA };\n} else {\n    msg.payload = { salidas: msg.salidaA };\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 260,
+        "wires": [
+            [
+                "0911112a2ff978ee"
+            ]
+        ]
+    },
+    {
+        "id": "0911112a2ff978ee",
+        "type": "mongodb out",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "salidasA",
+        "collection": "operaciones",
+        "payonly": true,
+        "upsert": true,
+        "multi": true,
+        "operation": "store",
+        "x": 1060,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4f42c3b2f3e06f3f",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "buscar",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 670,
+        "y": 260,
+        "wires": [
+            [
+                "91390d3bf199d1ad"
+            ]
+        ]
+    },
+    {
+        "id": "3bd2ea097dd3ef10",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 2",
+        "func": "\nmsg.payload = {\"salidas.nodo\": \"A\"}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 555,
+        "y": 260,
+        "wires": [
+            [
+                "4f42c3b2f3e06f3f"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "c2998bf82abf9921",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "Búsqueda",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 1460,
+        "y": 200,
+        "wires": [
+            [
+                "2a01c3d2b9d2849c"
+            ]
+        ]
+    },
+    {
+        "id": "4599c7ce792880e8",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 9",
+        "func": "msg.payload = {\"entradas.nodo\":\"A\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 200,
+        "wires": [
+            [
+                "c2998bf82abf9921"
+            ]
+        ]
+    },
+    {
+        "id": "af765dbe39b51536",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "Búsqueda",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 1460,
+        "y": 260,
+        "wires": [
+            [
+                "0462969f7f12dce1"
+            ]
+        ]
+    },
+    {
+        "id": "56071eb84a9cb442",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 10",
+        "func": "msg.payload = {\"salidas.nodo\":\"A\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 260,
+        "wires": [
+            [
+                "af765dbe39b51536"
+            ]
+        ]
+    },
+    {
+        "id": "b09e0309001b550e",
+        "type": "complete",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "scope": [
+            "c02c9f003763563a"
+        ],
+        "uncaught": false,
+        "x": 1175,
+        "y": 200,
+        "wires": [
+            [
+                "4599c7ce792880e8"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "8d437fab3b09561a",
+        "type": "complete",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "scope": [
+            "91390d3bf199d1ad"
+        ],
+        "uncaught": false,
+        "x": 1175,
+        "y": 260,
+        "wires": [
+            [
+                "56071eb84a9cb442"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "0462969f7f12dce1",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "A",
+        "func": "var strfinal = \"\"\n\nif (msg.payload.length != 0) {\n    for (let j = 0; j < msg.payload[0][\"salidas\"].length; j++) {\n        let string = \"<br> Usuario: \" + msg.payload[0][\"salidas\"][j][\"usuario\"]\n\n        let time = new Date(msg.payload[0][\"salidas\"][j][\"timestamp\"])\n        let hours = time.getHours()\n        hours = hours.toString().padStart(2, '0');\n        let minutes = time.getMinutes()\n        minutes = minutes.toString().padStart(2, '0');\n        let seconds = time.getSeconds();\n        seconds = seconds.toString().padStart(2, '0');\n\n        let final = \"<br> Fecha: \" + hours + \":\" + minutes + \":\" + seconds;\n        var str = string + final;\n        strfinal += str;\n    }\n    //var textoEnHtml = str.replace(/\\n/g, \"\\n<br>\\n\");\n    msg.payload =strfinal\n} else {\n    msg.payload = \"No hay salidas.\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 260,
+        "wires": [
+            [
+                "e957afeddd6cd8d0"
+            ]
+        ]
+    },
+    {
+        "id": "f755898aaaef2f9e",
+        "type": "ui_template",
+        "z": "7d1e7a665dc5ec5e",
+        "group": "d90c5f4a0ae85f89",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "5",
+        "format": "<h2> Entradas: </h2>\n<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1705,
+        "y": 320,
+        "wires": [
+            [
+                "f8f5dabf79b1c569"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "11c829328302a67e",
+        "type": "ui_template",
+        "z": "7d1e7a665dc5ec5e",
+        "group": "d90c5f4a0ae85f89",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "5",
+        "format": "<h2> Salidas: </h2>\n<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1705,
+        "y": 380,
+        "wires": [
+            [
+                "f8f5dabf79b1c569"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "41e43c71aead1a2f",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 11",
+        "func": "var strfinal = \"\"\n\nif (msg.payload.length != 0) {\n    for (let j = 0; j < msg.payload[0][\"entradas\"].length; j++) {\n        let string = \"<br>Usuario: \" + msg.payload[0][\"entradas\"][j][\"usuario\"]\n\n        let time = new Date(msg.payload[0][\"entradas\"][j][\"timestamp\"])\n        let hours = time.getHours()\n        hours = hours.toString().padStart(2, '0');\n        let minutes = time.getMinutes()\n        minutes = minutes.toString().padStart(2, '0');\n        let seconds = time.getSeconds();\n        seconds = seconds.toString().padStart(2, '0');\n\n        let final = \"<br>Fecha: \" + hours + \":\" + minutes + \":\" + seconds;\n        var str = string + final;\n        strfinal += \"\\n\\n\" + str;\n    }\n    msg.payload = strfinal\n} else {\n    msg.payload = \"No hay entradas.\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1600,
+        "y": 320,
+        "wires": [
+            [
+                "f755898aaaef2f9e"
+            ]
+        ]
+    },
+    {
+        "id": "7413d623bca9f9db",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "Búsqueda",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 1460,
+        "y": 320,
+        "wires": [
+            [
+                "41e43c71aead1a2f"
+            ]
+        ]
+    },
+    {
+        "id": "a9d91d857ae5b4a9",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 12",
+        "func": "msg.payload = {\"entradas.nodo\":\"B\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 320,
+        "wires": [
+            [
+                "7413d623bca9f9db"
+            ]
+        ]
+    },
+    {
+        "id": "e77f92e988319c1b",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "Búsqueda",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 1460,
+        "y": 380,
+        "wires": [
+            [
+                "e410aa41119e97b7"
+            ]
+        ]
+    },
+    {
+        "id": "5d8fa2618a7451bb",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 13",
+        "func": "msg.payload = {\"salidas.nodo\":\"B\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 380,
+        "wires": [
+            [
+                "e77f92e988319c1b"
+            ]
+        ]
+    },
+    {
+        "id": "1491c5dd0503a17e",
+        "type": "complete",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "scope": [
+            "8eeed0b00e1f15ab"
+        ],
+        "uncaught": false,
+        "x": 1175,
+        "y": 320,
+        "wires": [
+            [
+                "a9d91d857ae5b4a9"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "35f43485498bd596",
+        "type": "complete",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "scope": [
+            "1e44f7aee9f78d41"
+        ],
+        "uncaught": false,
+        "x": 1175,
+        "y": 380,
+        "wires": [
+            [
+                "5d8fa2618a7451bb"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "e410aa41119e97b7",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "A",
+        "func": "var strfinal = \"\"\n\nif (msg.payload.length != 0) {\n    for (let j = 0; j < msg.payload[0][\"salidas\"].length; j++) {\n        let string = \"<br> Usuario: \" + msg.payload[0][\"salidas\"][j][\"usuario\"]\n\n        let time = new Date(msg.payload[0][\"salidas\"][j][\"timestamp\"])\n        let hours = time.getHours()\n        hours = hours.toString().padStart(2, '0');\n        let minutes = time.getMinutes()\n        minutes = minutes.toString().padStart(2, '0');\n        let seconds = time.getSeconds();\n        seconds = seconds.toString().padStart(2, '0');\n\n        let final = \"<br> Fecha: \" + hours + \":\" + minutes + \":\" + seconds;\n        var str = string + final;\n        strfinal +=  str;\n    }\n    msg.payload = strfinal\n} else {\n    msg.payload = \"No hay salidas.\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 380,
+        "wires": [
+            [
+                "11c829328302a67e"
+            ]
+        ]
+    },
+    {
+        "id": "be7a6fd1f5b24888",
+        "type": "ui_template",
+        "z": "7d1e7a665dc5ec5e",
+        "group": "c870dbce0005a48b",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "5",
+        "format": "<h2> Entradas: </h2>\n<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1705,
+        "y": 440,
+        "wires": [
+            [
+                "1346bfd84e37148c"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "593dd39702b2749e",
+        "type": "ui_template",
+        "z": "7d1e7a665dc5ec5e",
+        "group": "c870dbce0005a48b",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "5",
+        "format": "<h2> Salidas: </h2>\n<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1705,
+        "y": 500,
+        "wires": [
+            [
+                "1346bfd84e37148c"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "6bf3eed03a85436d",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 14",
+        "func": "var strfinal = \"\"\n\nif (msg.payload.length!=0){\n    for (let j = 0; j<msg.payload[0][\"entradas\"].length; j++){\n        let string = \"<br> Usuario: \" + msg.payload[0][\"entradas\"][j][\"usuario\"]\n\n        let time = new Date(msg.payload[0][\"entradas\"][j][\"timestamp\"])\n        let hours = time.getHours() \n        hours = hours.toString().padStart(2, '0');\n        let minutes = time.getMinutes()\n        minutes = minutes.toString().padStart(2, '0');\n        let seconds = time.getSeconds();\n        seconds = seconds.toString().padStart(2, '0');\n\n        let final = \"<br> Fecha: \" + hours + \":\" + minutes + \":\" + seconds;\n        var str = string + final;\n        strfinal += str;\n    }    \nmsg.payload = strfinal\n} else {\n    msg.payload = \"No hay entradas.\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 440,
+        "wires": [
+            [
+                "be7a6fd1f5b24888"
+            ]
+        ]
+    },
+    {
+        "id": "c724fe211584f911",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "Búsqueda",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 1460,
+        "y": 440,
+        "wires": [
+            [
+                "6bf3eed03a85436d"
+            ]
+        ]
+    },
+    {
+        "id": "9eed1d9948aef2b7",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 15",
+        "func": "msg.payload = {\"entradas.nodo\":\"Principal\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 440,
+        "wires": [
+            [
+                "c724fe211584f911"
+            ]
+        ]
+    },
+    {
+        "id": "0a779ab50dd770a6",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "Búsqueda",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 1460,
+        "y": 500,
+        "wires": [
+            [
+                "7245424dd39f937f"
+            ]
+        ]
+    },
+    {
+        "id": "274ab103f1671e03",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 16",
+        "func": "msg.payload = {\"salidas.nodo\":\"Principal\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 500,
+        "wires": [
+            [
+                "0a779ab50dd770a6"
+            ]
+        ]
+    },
+    {
+        "id": "a4d693d903fbf272",
+        "type": "complete",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "scope": [
+            "93955a146ee7c7ad"
+        ],
+        "uncaught": false,
+        "x": 1175,
+        "y": 440,
+        "wires": [
+            [
+                "9eed1d9948aef2b7"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "1718a8c108753ce5",
+        "type": "complete",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "scope": [
+            "9b0955f028c24eb5"
+        ],
+        "uncaught": false,
+        "x": 1175,
+        "y": 500,
+        "wires": [
+            [
+                "274ab103f1671e03"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "7245424dd39f937f",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "A",
+        "func": "var strfinal = \"\"\n\nif (msg.payload.length != 0) {\n    for (let j = 0; j < msg.payload[0][\"salidas\"].length; j++) {\n        let string = \"<br> Usuario: \" + msg.payload[0][\"salidas\"][j][\"usuario\"]\n\n        let time = new Date(msg.payload[0][\"salidas\"][j][\"timestamp\"])\n        let hours = time.getHours()\n        hours = hours.toString().padStart(2, '0');\n        let minutes = time.getMinutes()\n        minutes = minutes.toString().padStart(2, '0');\n        let seconds = time.getSeconds();\n        seconds = seconds.toString().padStart(2, '0');\n\n        let final = \"<br> Fecha: \" + hours + \":\" + minutes + \":\" + seconds;\n        var str = string + final;\n        strfinal += str;\n    }\n    msg.payload = strfinal\n} else {\n    msg.payload = \"No hay salidas.\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1600,
+        "y": 500,
+        "wires": [
+            [
+                "593dd39702b2749e"
+            ]
+        ]
+    },
+    {
+        "id": "d3dc23220b1c9be9",
+        "type": "ui_button",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "group": "f2b4d7d6cc4c27db",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "clear",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1010,
+        "y": 680,
+        "wires": [
+            [
+                "82584180fd5e4e1c"
+            ]
+        ]
+    },
+    {
+        "id": "82584180fd5e4e1c",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "Reestablecimiento",
+        "func": "msg.payload = []\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 680,
+        "wires": [
+            [
+                "82442541b8210860",
+                "5760017ef81863c6",
+                "7e403151e1194ced"
+            ]
+        ]
+    },
+    {
+        "id": "cae866ec16e3cc3b",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "Entradas",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 940,
+        "y": 900,
+        "wires": [
+            [
+                "c9a06db36d3ca0ab"
+            ]
+        ]
+    },
+    {
+        "id": "45396346decb1889",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "Entradas",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 940,
+        "y": 980,
+        "wires": [
+            [
+                "0e72e5cf8b79318d"
+            ]
+        ]
+    },
+    {
+        "id": "7a3459e63e27e70c",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "Entradas",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 940,
+        "y": 1060,
+        "wires": [
+            [
+                "fa3aeafd5d79226f",
+                "0d25d2273e1d86bd"
+            ]
+        ]
+    },
+    {
+        "id": "b8d8d0bded835c16",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 24",
+        "func": "msg.payload = {\"entradas.nodo\":\"A\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 900,
+        "wires": [
+            [
+                "cae866ec16e3cc3b"
+            ]
+        ]
+    },
+    {
+        "id": "d708fb8926d7c738",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 26",
+        "func": "msg.payload = { \"entradas.nodo\": \"B\" }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 980,
+        "wires": [
+            [
+                "45396346decb1889"
+            ]
+        ]
+    },
+    {
+        "id": "97d1e913531684c9",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 28",
+        "func": "msg.payload = { \"entradas.nodo\": \"Principal\" }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1060,
+        "wires": [
+            [
+                "7a3459e63e27e70c"
+            ]
+        ]
+    },
+    {
+        "id": "0b5a611038845042",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "buscar",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 670,
+        "y": 200,
+        "wires": [
+            [
+                "c02c9f003763563a"
+            ]
+        ]
+    },
+    {
+        "id": "4dd3e73369464710",
+        "type": "mongodb out",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "entradasB",
+        "collection": "operaciones",
+        "payonly": true,
+        "upsert": true,
+        "multi": false,
+        "operation": "store",
+        "x": 1070,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "ad4e2d1bd5ab81da",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "buscar",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 670,
+        "y": 320,
+        "wires": [
+            [
+                "8eeed0b00e1f15ab"
+            ]
+        ]
+    },
+    {
+        "id": "304afa717f6fa47d",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 3",
+        "func": "\nmsg.payload = {\"entradas.nodo\": \"B\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 555,
+        "y": 320,
+        "wires": [
+            [
+                "ad4e2d1bd5ab81da"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "8eeed0b00e1f15ab",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "Entradas B",
+        "func": "if (msg.payload.length != 0) {\n    msg.payload = { _id: msg.payload[0][\"_id\"], entradas: msg.entradaB };\n} else {\n    msg.payload = { entradas: msg.entradaB };\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 320,
+        "wires": [
+            [
+                "4dd3e73369464710"
+            ]
+        ]
+    },
+    {
+        "id": "1e44f7aee9f78d41",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "Salidas B",
+        "func": "if (msg.payload.length != 0) {\n    msg.payload = { _id: msg.payload[0][\"_id\"], salidas: msg.salidaB };\n} else {\n    msg.payload = { salidas: msg.salidaB };\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 380,
+        "wires": [
+            [
+                "6a1d1b3cc324f3fe"
+            ]
+        ]
+    },
+    {
+        "id": "9b0955f028c24eb5",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "Salidas C",
+        "func": "if (msg.payload.length != 0) {\n    msg.payload = { _id: msg.payload[0][\"_id\"], salidas: msg.salidaC };\n} else {\n    msg.payload = { salidas: msg.salidaC };\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 500,
+        "wires": [
+            [
+                "cdc5c965dd2eca8e"
+            ]
+        ]
+    },
+    {
+        "id": "93955a146ee7c7ad",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "Entradas C",
+        "func": "if (msg.payload.length != 0) {\n    msg.payload = { _id: msg.payload[0][\"_id\"], entradas: msg.entradaC };\n} else {\n    msg.payload = { entradas: msg.entradaC };\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 440,
+        "wires": [
+            [
+                "216904efc87248ca"
+            ]
+        ]
+    },
+    {
+        "id": "5d21d141e9ccd889",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "buscar",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 670,
+        "y": 380,
+        "wires": [
+            [
+                "1e44f7aee9f78d41"
+            ]
+        ]
+    },
+    {
+        "id": "0823f49ff0dc9273",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 4",
+        "func": "\nmsg.payload = { \"salidas.nodo\": \"B\" }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 555,
+        "y": 380,
+        "wires": [
+            [
+                "5d21d141e9ccd889"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "6a1d1b3cc324f3fe",
+        "type": "mongodb out",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "salidasB",
+        "collection": "operaciones",
+        "payonly": true,
+        "upsert": true,
+        "multi": false,
+        "operation": "store",
+        "x": 1060,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "216904efc87248ca",
+        "type": "mongodb out",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "entradasC",
+        "collection": "operaciones",
+        "payonly": true,
+        "upsert": true,
+        "multi": false,
+        "operation": "store",
+        "x": 1070,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e577cf62ea31579a",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "buscar",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 670,
+        "y": 440,
+        "wires": [
+            [
+                "93955a146ee7c7ad"
+            ]
+        ]
+    },
+    {
+        "id": "b3a476feadedca35",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 5",
+        "func": "\nmsg.payload = { \"entradas.nodo\": \"Principal\" }\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 555,
+        "y": 440,
+        "wires": [
+            [
+                "e577cf62ea31579a"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "6fbf17e27439e476",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "buscar",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 670,
+        "y": 500,
+        "wires": [
+            [
+                "9b0955f028c24eb5"
+            ]
+        ]
+    },
+    {
+        "id": "757284f73f11668a",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 6",
+        "func": "\nmsg.payload = { \"salidas.nodo\": \"Principal\" }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 555,
+        "y": 500,
+        "wires": [
+            [
+                "6fbf17e27439e476"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "cdc5c965dd2eca8e",
+        "type": "mongodb out",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "salidasC",
+        "collection": "operaciones",
+        "payonly": true,
+        "upsert": true,
+        "multi": false,
+        "operation": "store",
+        "x": 1060,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "4a92404ecefd2899",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "Porcentaje de aforo A",
+        "func": "var message = JSON.parse(JSON.stringify(msg.payload));\nif (msg.payload.length!=0){\n    var entradas = message[0][\"entradas\"]\n    var num = 0;\n    var aforomaximo = 5;\n\n    for (let i=0;i<entradas.length;i++){\n        num++;\n    }\n\n    msg.aforoa = (num/aforomaximo)*100;\n} else {\n    msg.aforoa = 0;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 640,
+        "wires": [
+            [
+                "c56043db2ea01ee4"
+            ]
+        ]
+    },
+    {
+        "id": "6eac8eb91565f2b8",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "Aforo A",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 440,
+        "y": 640,
+        "wires": [
+            [
+                "4a92404ecefd2899"
+            ]
+        ]
+    },
+    {
+        "id": "fd6aacc50fe793ef",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "Aforo B",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 440,
+        "y": 680,
+        "wires": [
+            [
+                "b86729b75cc175f7"
+            ]
+        ]
+    },
+    {
+        "id": "e19490e92d353f3a",
+        "type": "mongodb in",
+        "z": "7d1e7a665dc5ec5e",
+        "mongodb": "93321e75a9babcf6",
+        "name": "Aforo C",
+        "collection": "operaciones",
+        "operation": "find",
+        "x": 440,
+        "y": 720,
+        "wires": [
+            [
+                "831949ac4e8e6908"
+            ]
+        ]
+    },
+    {
+        "id": "b86729b75cc175f7",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "Porcentaje de aforo B",
+        "func": "if (msg.payload.length!=0){\n    var message = JSON.parse(JSON.stringify(msg.payload));\n\n    var entradas = message[0][\"entradas\"]\n    var num = 0;\n    var aforomaximo = 5;\n\n    for (let i = 0; i < entradas.length; i++) {\n        num++;\n    }\n\n    msg.aforob = (num / aforomaximo) * 100;\n} else {\n    msg.aforob = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 680,
+        "wires": [
+            [
+                "54f30d8fb295bc9f"
+            ]
+        ]
+    },
+    {
+        "id": "831949ac4e8e6908",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "Porcentaje de aforo C",
+        "func": "var message = JSON.parse(JSON.stringify(msg.payload));\nif (msg.payload.length!=0){\n    var entradas = message[0][\"entradas\"]\n    var num = 0;\n    var aforomaximo = 5;\n\n    for (let i = 0; i < entradas.length; i++) {\n        num++;\n    }\n\n    msg.aforoc = (num / aforomaximo) * 100;\n} else {\n    msg.aforoc = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 720,
+        "wires": [
+            [
+                "c58d1abff9dfab79"
+            ]
+        ]
+    },
+    {
+        "id": "d869934df41a52bd",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "A",
+        "func": "msg.payload = {\"entradas.nodo\": \"A\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 640,
+        "wires": [
+            [
+                "6eac8eb91565f2b8"
+            ]
+        ]
+    },
+    {
+        "id": "30633dd8a1eb29af",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "B",
+        "func": "msg.payload = {\"entradas.nodo\": \"B\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 680,
+        "wires": [
+            [
+                "fd6aacc50fe793ef"
+            ]
+        ]
+    },
+    {
+        "id": "04acd0beef375f1a",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "Principal",
+        "func": "msg.payload = {\"entradas.nodo\": \"Principal\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 720,
+        "wires": [
+            [
+                "e19490e92d353f3a"
+            ]
+        ]
+    },
+    {
+        "id": "a78123fa5bfd22cd",
+        "type": "complete",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "scope": [
+            "8eeed0b00e1f15ab",
+            "93955a146ee7c7ad",
+            "c56043db2ea01ee4"
+        ],
+        "uncaught": false,
+        "x": 110,
+        "y": 680,
+        "wires": [
+            [
+                "d869934df41a52bd",
+                "30633dd8a1eb29af",
+                "04acd0beef375f1a"
+            ]
+        ]
+    },
+    {
+        "id": "c7047547fea0532d",
+        "type": "ui_template",
+        "z": "7d1e7a665dc5ec5e",
+        "group": "",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<script id=\"clockScript1\" type=\"text/javascript\">\n    var clockInterval;\n    $(function () {\n        if (clockInterval) return;\n\n        //add logo\n        var div1 = $('<div/>');\n        var logo = new Image();\n\n        logo.src = '/icon120x120.png'\n        logo.height = 45;\n        div1[0].style.margin = '10px auto';\n\n        div1.append(logo);\n\n        //add clock\n        var div2 = $('<div/>');\n        var p = $('<p/>');\n\n        div2.append(p);\n        div2[0].style.margin = '5px';\n\n        function displayTime() {\n            p.text(new Date().toLocaleString());\n        }\n        \n        clockInterval = setInterval(displayTime, 1000);\n\n        //add to toolbar when it's available\n        var addToToolbarTimer;\n        \n        function addToToolbar() {\n            var toolbar = $('.md-toolbar-tools');\n            \n            if(!toolbar.length) return;\n            \n            toolbar.append(div1);\n            toolbar.append(div2);\n            clearInterval(addToToolbarTimer);\n        }\n        addToToolbarTimer = setInterval(addToToolbar, 100);\n    });\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 600,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3e9eb8880595492",
+        "type": "ui_template",
+        "z": "7d1e7a665dc5ec5e",
+        "group": "f70bc38767aeb31a",
+        "name": "Cámara",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<iframe title=\"Cam\" src=\"http://192.168.152.154:8889/mystream/%22%3E\"> </iframe>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 220,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "892a69202613fc7d",
+        "type": "http in",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "url": "/prueba",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "f8e154a538fa9acc",
+                "c1c509b5ed9209d6"
+            ]
+        ]
+    },
+    {
+        "id": "c9a06db36d3ca0ab",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 30",
+        "func": "let d = new Date();\nlet timestamp = d.getTime();\nif (msg.payload.length!=0){\n    var message = JSON.parse(JSON.stringify(msg.payload));\n\n    let numEntr = 0;\n\n    for (let i=0; i<message[0][\"entradas\"].length; i++){\n        numEntr++;\n    }\n\n    msg.topic = \"aforo\";\n    msg.timestamp = timestamp;\n    msg.payload = numEntr;\n} else {\n    msg.topic = \"aforo\";\n    msg.timestamp = timestamp;\n    msg.payload = 0;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 900,
+        "wires": [
+            [
+                "82442541b8210860"
+            ]
+        ]
+    },
+    {
+        "id": "f8e154a538fa9acc",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "Blockchain",
+        "func": "// emisor nodo A\n// emisor nodo B\n// emisor nodo C\n\n// leemos la blockchain\nvar message = JSON.parse(JSON.stringify(msg.payload));\nvar blockchain = message[\"bloques\"];\nvar entradasA = [];\nvar salidasA = [];\nvar entradasB= [];\nvar salidasB = []; \nvar entradasC = [];\nvar salidasC = [];\nvar claveNodoA = \"MIIBuDCCASwGByqGSM44BAEwggEfAoGBAP1/U4EddRIpUt9KnC7s5Of2EbdSPO9EAMMeP4C2USZpRV1AIlH7WT2NWPq/xfW6MPbLm1Vs14E7gB00b/JmYLdrmVClpJ+f6AR7ECLCT7up1/63xhv4O1fnxqimFQ8E+4P208UewwI1VBNaFpEy9nXzrith1yrv8iIDGZ3RSAHHAhUAl2BQjxUjC8yykrmCouuEC/BYHPUCgYEA9+GghdabPd7LvKtcNrhXuXmUr7v6OuqC+VdMCz0HgmdRWVeOutRZT+ZxBxCBgLRJFnEj6EwoFhO3zwkyjMim4TwWeotUfI0o4KOuHiuzpnWRbqN/C/ohNWLx+2J6ASQ7zKTxvqhRkImog9/hWuWfBpKLZl6Ae1UlZAFMO/7PSSoDgYUAAoGBAJOpKdIMrUgi6vjPNv9iXAaLKzihwQO1764tKIlaOengc3+ScNM36U8vk0PhwUJJcDYHjc/Alb4C0RyNipYVLcQEJYTy6AYHFb0sEOZmlmv/TVdFZIOryPh9m49n/tJSNf7hixd80t5PF5gUKEte9BVnRR3jZK1ddoD6IznrnR6P\";\nvar claveNodoB = \"MIIBuDCCASwGByqGSM44BAEwggEfAoGBAP1/U4EddRIpUt9KnC7s5Of2EbdSPO9EAMMeP4C2USZpRV1AIlH7WT2NWPq/xfW6MPbLm1Vs14E7gB00b/JmYLdrmVClpJ+f6AR7ECLCT7up1/63xhv4O1fnxqimFQ8E+4P208UewwI1VBNaFpEy9nXzrith1yrv8iIDGZ3RSAHHAhUAl2BQjxUjC8yykrmCouuEC/BYHPUCgYEA9+GghdabPd7LvKtcNrhXuXmUr7v6OuqC+VdMCz0HgmdRWVeOutRZT+ZxBxCBgLRJFnEj6EwoFhO3zwkyjMim4TwWeotUfI0o4KOuHiuzpnWRbqN/C/ohNWLx+2J6ASQ7zKTxvqhRkImog9/hWuWfBpKLZl6Ae1UlZAFMO/7PSSoDgYUAAoGBAJOpKdIMrUgi6vjPNv9iXAaLKzihwQO1764tKIlaOengc3+ScNM36U8vk0PhwUJJcDYHjc/Alb4C0RyNipYVLcQEJYTy6AYHFb0sEOZmlmv/TVdFZIOryPh9m49n/tJSNf7hixd80t5PF5gUKEte9BVnRR3jZK1ddoD6IznrnR6E\";\nvar claveNodoC = \"MIIBuDCCASwGByqGSM44BAEwggEfAoGBAP1/U4EddRIpUt9KnC7s5Of2EbdSPO9EAMMeP4C2USZpRV1AIlH7WT2NWPq/xfW6MPbLm1Vs14E7gB00b/JmYLdrmVClpJ+f6AR7ECLCT7up1/63xhv4O1fnxqimFQ8E+4P208UewwI1VBNaFpEy9nXzrith1yrv8iIDGZ3RSAHHAhUAl2BQjxUjC8yykrmCouuEC/BYHPUCgYEA9+GghdabPd7LvKtcNrhXuXmUr7v6OuqC+VdMCz0HgmdRWVeOutRZT+ZxBxCBgLRJFnEj6EwoFhO3zwkyjMim4TwWeotUfI0o4KOuHiuzpnWRbqN/C/ohNWLx+2J6ASQ7zKTxvqhRkImog9/hWuWfBpKLZl6Ae1UlZAFMO/7PSSoDgYUAAoGBAJOpKdIMrUgi6vjPNv9iXAaLKzihwQO1764tKIlaOengc3+ScNM36U8vk0PhwUJJcDYHjc/Alb4C0RyNipYVLcQEJYTy6AYHFb0sEOZmlmv/TVdFZIOryPh9m49n/tJSNf7hixd80t5PF5gUKEte9BVnRR3jZK1ddoD6IznrnR6C\";\nvar usuarios = [];\n\nfor (var i = 0; i < blockchain.length; i++){\n    var transacciones = blockchain[i][\"transacciones\"];\n    for (var j = 0; j < transacciones.length; j++){\n            var emisor = transacciones[j][\"emisor\"];\n            if (usuarios.length==0){\n                usuarios.push({usuario : emisor, transacciones: []})\n            } else {\n                var num = 0\n                for (let i=0;i<usuarios.length;i++){\n                    if (usuarios[i][\"usuario\"]==emisor){\n                        num++;\n                    }\n                }\n                if (num==0){\n                    usuarios.push({ usuario: emisor, transacciones: [] })\n                }\n            }\n\n            /* Recorrer la lista de usuarios actuales */\n            for (var k = 0; k < usuarios.length; k++){\n                if (transacciones[j][\"emisor\"]==usuarios[k][\"usuario\"]){\n                    var tr = usuarios[k][\"transacciones\"]\n                    tr.push(transacciones[j]);\n                }\n            }\n    }  \n}\n\n\n/* \n   ############################# \n   #    LECTURA DE USUARIOS    #\n   #############################\n                                */\n\nfor (let k=0; k<usuarios.length;k++){\n    usuarios[k][\"transacciones\"].sort(function (x, y) {\n        return x.timestamp - y.timestamp;\n    })\n    if (usuarios[k][\"transacciones\"].length%2!=0) {\n       /* \n       */\n        var tr0 = usuarios[k][\"transacciones\"];\n        var time0 = tr0[tr0.length - 1]\n        var time1 = tr0[tr0.length-2];\n        if (tr0.length == 1) {\n            if (time0[\"destinatario\"] == claveNodoA) {\n                var json = {\n                    usuario: time0[\"emisor\"],\n                    firma: time0[\"firma\"],\n                    timestamp: time0[\"timestamp\"],\n                    nodo: \"A\"\n                }\n                entradasA.push(json);\n            } else if (time0[\"destinatario\"] == claveNodoB) {\n                var json = {\n                    usuario: time0[\"emisor\"],\n                    firma: time0[\"firma\"],\n                    timestamp: time0[\"timestamp\"],\n                    nodo: \"B\"\n                }\n                entradasB.push(json);\n            } else if (time0[\"destinatario\"] == claveNodoC) {\n                var json = {\n                    usuario: time0[\"emisor\"],\n                    firma: time0[\"firma\"],\n                    timestamp: time0[\"timestamp\"],\n                    nodo: \"Principal\"\n                }\n                entradasC.push(json);\n            }\n        } else {\n            if (time0[\"destinatario\"] == claveNodoA) {\n                if (time1[\"destinatario\"] == claveNodoA) {\n                    salidasA.splice(usuarios[k][\"usuario\"])\n                    var json = {\n                        usuario: time0[\"emisor\"],\n                        firma: time0[\"firma\"],\n                        timestamp: time0[\"timestamp\"],\n                        nodo: \"A\"\n                    }\n                    entradasA.push(json);\n                } else if (time1[\"destinatario\"] == claveNodoB) {\n                    salidasB.splice(usuarios[k][\"usuario\"])\n                    var json = {\n                        usuario: time0[\"emisor\"],\n                        firma: time0[\"firma\"],\n                        timestamp: time0[\"timestamp\"],\n                        nodo: \"A\"\n                    }\n                    entradasA.push(json);\n                } else if (time1[\"destinatario\"] == claveNodoC) {\n                    salidasC.splice(usuarios[k][\"usuario\"])\n                    var json = {\n                        usuario: time0[\"emisor\"],\n                        firma: time0[\"firma\"],\n                        timestamp: time0[\"timestamp\"],\n                        nodo: \"A\"\n                    }\n                    entradasA.push(json);\n                }\n                \n            } else if (time0[\"destinatario\"] == claveNodoB) {\n                if (time1[\"destinatario\"]==claveNodoA){\n                    salidasA.splice(time0[\"emisor\"])\n                    var json = {\n                        usuario: time0[\"emisor\"],\n                        firma: time0[\"firma\"],\n                        timestamp: time0[\"timestamp\"],\n                        nodo: \"B\"\n                    }\n                    entradasB.push(json);\n                } else if(time1[\"destinatario\"]==claveNodoB){\n                    salidasB.splice(time0[\"emisor\"])\n                    var json = {\n                        usuario: time0[\"emisor\"],\n                        firma: time0[\"firma\"],\n                        timestamp: time0[\"timestamp\"],\n                        nodo: \"B\"\n                    }\n                    entradasB.push(json);\n                } else if(time1[\"destinatario\"]==claveNodoC){\n                    salidasC.splice(time0[\"emisor\"])\n                    var json = {\n                        usuario: time0[\"emisor\"],\n                        firma: time0[\"firma\"],\n                        timestamp: time0[\"timestamp\"],\n                        nodo: \"B\"\n                    }\n                    entradasB.push(json);\n                }\n                \n            \n            } else if (time0[\"destinatario\"] == claveNodoC) {\n                if (time1[\"destinatario\"] == claveNodoA) {\n                    salidasA.splice(time0[\"emisor\"])\n                    var json = {\n                        usuario: time0[\"emisor\"],\n                        firma: time0[\"firma\"],\n                        timestamp: time0[\"timestamp\"],\n                        nodo: \"Principal\"\n                    }\n                    entradasC.push(json);\n                } else if (time1[\"destinatario\"] == claveNodoB) {\n                    salidasB.splice(time0[\"emisor\"])\n                    var json = {\n                        usuario: time0[\"emisor\"],\n                        firma: time0[\"firma\"],\n                        timestamp: time0[\"timestamp\"],\n                        nodo: \"Principal\"\n                    }\n                    entradasC.push(json);\n                } else if (time1[\"destinatario\"] == claveNodoC) {\n                    salidasC.splice(time0[\"emisor\"])\n                    var json = {\n                        usuario: time0[\"emisor\"],\n                        firma: time0[\"firma\"],\n                        timestamp: time0[\"timestamp\"],\n                        nodo: \"Principal\"\n                    }\n                    entradasC.push(json);\n                }\n                \n            }\n        }\n    } else {\n        var tr0 = usuarios[k][\"transacciones\"];\n        var timestamp0 = tr0[tr0.length - 1];\n        var timestamp1 = tr0[tr0.length-2];   \n        if (tr0.length==2){\n            if (timestamp0[\"destinatario\"] == claveNodoA) {\n                if (timestamp1[\"destinatario\"] == claveNodoC) {\n                    var json = {\n                        usuario: timestamp0[\"emisor\"],\n                        firma: timestamp0[\"firma\"],\n                        timestamp: timestamp0[\"timestamp\"],\n                        nodo: \"A\"\n                    }\n                    entradasA.push(json);\n                    var json2 = {\n                        usuario: timestamp1[\"emisor\"],\n                        firma: timestamp1[\"firma\"],\n                        timestamp: timestamp1[\"timestamp\"],\n                        nodo: \"Principal\"\n                    }\n                    entradasC.push(json2);\n                } else {\n                   // entradasA.splice(usuarios[k][\"usuario\"]);\n                    var json = {\n                        usuario: timestamp0[\"emisor\"],\n                        firma: timestamp0[\"firma\"],\n                        timestamp: timestamp0[\"timestamp\"],\n                        nodo: \"A\"\n                    }\n                    salidasA.push(json);\n                }\n            } else if (timestamp0[\"destinatario\"] == claveNodoB) {\n                if (timestamp1[\"destinatario\"] == claveNodoC) {\n                    var json = {\n                        usuario: timestamp0[\"emisor\"],\n                        firma: timestamp0[\"firma\"],\n                        timestamp: timestamp0[\"timestamp\"],\n                        nodo: \"B\"\n                    }\n                    entradasB.push(json);\n                    var json2 = {\n                        usuario: timestamp1[\"emisor\"],\n                        firma: timestamp1[\"firma\"],\n                        timestamp: timestamp1[\"timestamp\"],\n                        nodo: \"Principal\"\n                    }\n                    entradasC.push(json2);\n                } else {\n                    entradasB.splice(usuarios[k][\"usuario\"]);\n                    var json = {\n                        usuario: timestamp0[\"emisor\"],\n                        firma: timestamp0[\"firma\"],\n                        timestamp: timestamp0[\"timestamp\"],\n                        nodo: \"B\"\n                    }\n                    salidasB.push(json);\n                }\n            } else if (timestamp0[\"destinatario\"] == claveNodoC) {\n                entradasC.splice(usuarios[k][\"usuario\"]);\n                var json = {\n                    usuario: timestamp0[\"emisor\"],\n                    firma: timestamp0[\"firma\"],\n                    timestamp: timestamp0[\"timestamp\"],\n                    nodo: \"Principal\"\n                }\n                salidasC.push(json);\n            }\n        } else {\n            if (timestamp0[\"destinatario\"] == claveNodoA) {\n                    entradasA.splice(usuarios[k][\"usuario\"]);\n                    var json = {\n                        usuario: timestamp0[\"emisor\"],\n                        firma: timestamp0[\"firma\"],\n                        timestamp: timestamp0[\"timestamp\"],\n                        nodo: \"A\"\n                    }\n                    salidasA.push(json);\n                \n            } else if (timestamp0[\"destinatario\"] == claveNodoB) {\n                    entradasB.splice(usuarios[k][\"usuario\"]);\n                    var json = {\n                        usuario: timestamp0[\"emisor\"],\n                        firma: timestamp0[\"firma\"],\n                        timestamp: timestamp0[\"timestamp\"],\n                        nodo: \"B\"\n                    }\n                    salidasB.push(json);\n            } else if (timestamp0[\"destinatario\"] == claveNodoC) {\n                if (timestamp1[\"destinatario\"] == claveNodoA){\n                    entradasC.splice(usuarios[k][\"usuario\"]);\n                    var json = {\n                        usuario: timestamp0[\"emisor\"],\n                        firma: timestamp0[\"firma\"],\n                        timestamp: timestamp0[\"timestamp\"],\n                        nodo: \"Principal\"\n                    }\n                    salidasC.push(json);\n                    entradasA.splice(usuarios[k][\"usuario\"]);\n                    var json2 = {\n                        usuario: timestamp1[\"emisor\"],\n                        firma: timestamp1[\"firma\"],\n                        timestamp: timestamp1[\"timestamp\"],\n                        nodo: \"A\"\n                    }\n                    salidasA.push(json2);\n                } else if (timestamp1[\"destinatario\"] == claveNodoB){\n                    entradasC.splice(usuarios[k][\"usuario\"]);\n                    var json = {\n                        usuario: timestamp0[\"emisor\"],\n                        firma: timestamp0[\"firma\"],\n                        timestamp: timestamp0[\"timestamp\"],\n                        nodo: \"Principal\"\n                    }\n                    salidasC.push(json);\n                    entradasB.splice(usuarios[k][\"usuario\"]);\n                    var json2 = {\n                        usuario: timestamp1[\"emisor\"],\n                        firma: timestamp1[\"firma\"],\n                        timestamp: timestamp1[\"timestamp\"],\n                        nodo: \"B\"\n                    }\n                    salidasB.push(json);\n                }\n                \n            }\n        }\n    }\n}\n//var final = { Aentradas: entradasA, Asalidas: salidasA, Bentradas: entradasB, Bsalidas: salidasB, Centradas: entradasC, Csalidas: salidasC};\nentradasA.sort(function (x, y) {\n    return x.timestamp - y.timestamp;\n})\nsalidasA.sort(function (x, y) {\n    return x.timestamp - y.timestamp;\n})\nentradasB.sort(function (x, y) {\n    return x.timestamp - y.timestamp;\n})\nsalidasB.sort(function (x, y) {\n    return x.timestamp - y.timestamp;\n})\nentradasC.sort(function (x, y) {\n    return x.timestamp - y.timestamp;\n})\nsalidasC.sort(function (x, y) {\n    return x.timestamp - y.timestamp;\n})\n\nmsg.entradaA = entradasA;\nmsg.salidaA = salidasA;\nmsg.entradaB = entradasB;\nmsg.salidaB = salidasB;\nmsg.entradaC = entradasC;\nmsg.salidaC = salidasC;\nmsg.le = usuarios;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 300,
+        "wires": [
+            [
+                "9dd44ee0fdcae206",
+                "3bd2ea097dd3ef10",
+                "304afa717f6fa47d",
+                "0823f49ff0dc9273",
+                "b3a476feadedca35",
+                "757284f73f11668a"
+            ]
+        ]
+    },
+    {
+        "id": "3cef27040ef357b6",
+        "type": "complete",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "scope": [
+            "c02c9f003763563a"
+        ],
+        "uncaught": false,
+        "x": 590,
+        "y": 900,
+        "wires": [
+            [
+                "b8d8d0bded835c16"
+            ]
+        ]
+    },
+    {
+        "id": "0e72e5cf8b79318d",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 31",
+        "func": "\nlet d = new Date();\nlet timestamp = d.getTime();\n\nif (msg.payload.length!=0){\n    var message = JSON.parse(JSON.stringify(msg.payload));\n\n    let numEntr = 0;\n\n    for (let i=0; i<message[0][\"entradas\"].length; i++){\n        numEntr++;\n    }\n\n    msg.topic = \"aforo\";\n    msg.timestamp = timestamp;\n    msg.payload = numEntr;\n} else {\n    msg.topic = \"aforo\";\n    msg.timestamp = timestamp;\n    msg.payload = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 980,
+        "wires": [
+            [
+                "7e403151e1194ced"
+            ]
+        ]
+    },
+    {
+        "id": "fa3aeafd5d79226f",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 32",
+        "func": "let d = new Date();\nlet timestamp = d.getTime();\nif (msg.payload.length != 0) {\n    var message = JSON.parse(JSON.stringify(msg.payload));\n\n    let numEntr = 0;\n\n    for (let i = 0; i < message[0][\"entradas\"].length; i++) {\n        numEntr++;\n    }\n\n    msg.topic = \"aforo\";\n    msg.timestamp = timestamp;\n    msg.payload = numEntr;\n} else {\n    msg.topic = \"aforo\";\n    msg.timestamp = timestamp;\n    msg.payload = 0;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 1060,
+        "wires": [
+            [
+                "5760017ef81863c6",
+                "c8e3223b1c9dd90a"
+            ]
+        ]
+    },
+    {
+        "id": "23d058c177989daf",
+        "type": "complete",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "scope": [
+            "8eeed0b00e1f15ab"
+        ],
+        "uncaught": false,
+        "x": 590,
+        "y": 980,
+        "wires": [
+            [
+                "d708fb8926d7c738"
+            ]
+        ]
+    },
+    {
+        "id": "9b278acf84dc8bfb",
+        "type": "complete",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "scope": [
+            "93955a146ee7c7ad"
+        ],
+        "uncaught": false,
+        "x": 590,
+        "y": 1060,
+        "wires": [
+            [
+                "97d1e913531684c9"
+            ]
+        ]
+    },
+    {
+        "id": "62cb9667a70bac36",
+        "type": "ui_ui_control",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "events": "all",
+        "x": 1820,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c1c509b5ed9209d6",
+        "type": "http response",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 410,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "0d25d2273e1d86bd",
+        "type": "debug",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "c8e3223b1c9dd90a",
+        "type": "debug",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "2a01c3d2b9d2849c",
+        "type": "function",
+        "z": "7d1e7a665dc5ec5e",
+        "name": "function 8",
+        "func": "var strfinal = \"\"\n\nif (msg.payload.length != 0) {\n    for (let j = 0; j < msg.payload[0][\"entradas\"].length; j++) {\n        let string = \"<br> Usuario: \" + msg.payload[0][\"entradas\"][j][\"usuario\"]\n\n        let time = new Date(msg.payload[0][\"entradas\"][j][\"timestamp\"])\n        let hours = time.getHours()\n        hours = hours.toString().padStart(2, '0');\n        let minutes = time.getMinutes()\n        minutes = minutes.toString().padStart(2, '0');\n        let seconds = time.getSeconds();\n        seconds = seconds.toString().padStart(2, '0');\n\n        let final = \"<br> Fecha: \" + hours + \":\" + minutes + \":\" + seconds;\n        var str = string + final;\n        strfinal += str;\n    }\n    msg.payload = strfinal\n} else {\n    msg.payload = \"No hay entradas.\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1600,
+        "y": 200,
+        "wires": [
+            [
+                "7ca6fa1a6219783e"
+            ]
+        ]
+    },
+    {
+        "id": "f2b4d7d6cc4c27db",
+        "type": "ui_group",
+        "name": "Histórico",
+        "tab": "c159d7683ca6dc8a",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9905b0ad57d8a427",
+        "type": "ui_group",
+        "name": "Porcentaje de aforo completado",
+        "tab": "c159d7683ca6dc8a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "93321e75a9babcf6",
+        "type": "mongodb",
+        "hostname": "192.168.1.134",
+        "port": "27017",
+        "db": "nodesec",
+        "name": ""
+    },
+    {
+        "id": "448a153d771784b9",
+        "type": "ui_group",
+        "name": "Nodo A",
+        "tab": "c159d7683ca6dc8a",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d90c5f4a0ae85f89",
+        "type": "ui_group",
+        "name": "Nodo B",
+        "tab": "c159d7683ca6dc8a",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c870dbce0005a48b",
+        "type": "ui_group",
+        "name": "Nodo principal",
+        "tab": "c159d7683ca6dc8a",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f70bc38767aeb31a",
+        "type": "ui_group",
+        "name": "Camara",
+        "tab": "83a8964bbac81165",
+        "order": 1,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c159d7683ca6dc8a",
+        "type": "ui_tab",
+        "name": "Datos actuales",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "83a8964bbac81165",
+        "type": "ui_tab",
+        "name": "Camara",
+        "icon": "camera",
+        "disabled": false,
+        "hidden": false
+    }
+]
