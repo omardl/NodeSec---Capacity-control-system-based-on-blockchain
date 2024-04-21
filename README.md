@@ -96,7 +96,8 @@ El prototipo creado contiende las siguientes características:
 
 ------------
 
-### Proyecto desarrollado para la asignatura "Laboratorio de Proyectos" del grado en Ingeniería de Tecnologías de Telecomunicación de la UVigo. Todos los proyectos de la asignatura fueron expuestos al resto de estudiantes de la facultad y, posteriormente, al público general en el museo Verbum de Vigo durante un evento llamado "LPRO Days".
+### Proyecto desarrollado para la asignatura "Laboratorio de Proyectos" del grado en Ingeniería de Tecnologías de Telecomunicación de la UVigo. 
+Todos los proyectos de la asignatura fueron expuestos al resto de estudiantes de la facultad y, posteriormente, al público general en el museo Verbum de Vigo durante un evento llamado "LPRO Days".
 
 
 ### Autores
