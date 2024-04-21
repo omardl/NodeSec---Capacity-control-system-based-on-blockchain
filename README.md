@@ -94,6 +94,7 @@ El prototipo creado contiende las siguientes características:
 
 ![Dashboard_NodeSec_2](https://github.com/omardl/NodeSec---Capacity-control-system-based-on-blockchain/assets/105445540/99c00ff4-0d66-4b94-8312-c8e11d91d18c)
 
+------------
 
 ### Proyecto desarrollado para la asignatura "Laboratorio de Proyectos" del grado en Ingeniería de Tecnologías de Telecomunicación de la UVigo. Todos los proyectos de la asignatura fueron expuestos al resto de estudiantes de la facultad y, posteriormente, al público general en el museo Verbum de Vigo durante un evento llamado "LPRO Days".
 
